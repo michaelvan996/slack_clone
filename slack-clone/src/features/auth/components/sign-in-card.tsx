@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import {
     Card, 
     CardContent, 
@@ -14,10 +15,11 @@ export const SignInCard = () => {
                 <CardTitle>
                     Login to continue
                 </CardTitle>
+                <CardDescription>
+                    Use your email or another service to continue
+                </CardDescription>
             </CardHeader>
-            <CardDescription>
-                Use your email or another service to continue
-            </CardDescription>
+            
             <CardContent className="space-y-5 px-0 pb-0">
                 <form className="space-y-2.5">
                     <Input
@@ -28,6 +30,17 @@ export const SignInCard = () => {
                         type="email"
                         required
                     />
+                    <Input
+                        disabled={false}
+                        value=""
+                        onChange={() => {}}
+                        placeholder="Password"
+                        type="password"
+                        required
+                    />
+                    <Button type="submit" className="w-full" size="lg" disabled={false}>
+                        Continue
+                    </Button>
                 </form>
             </CardContent>
         </Card>
