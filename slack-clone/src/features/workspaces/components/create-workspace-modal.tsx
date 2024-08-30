@@ -26,6 +26,16 @@ export const CreateWorkspaceModal = () => {
     const handleSubmit = () => {
         mutate({
             name: "Workspace 1"
+        }, {
+            onSuccess() {
+                // Redirect to that workspace id
+            },
+            onError: () => {
+                // Show toast error
+            },
+            onSettled: () => {
+                // Reset form
+            }
         })
     };
 
