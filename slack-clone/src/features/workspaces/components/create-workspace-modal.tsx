@@ -25,17 +25,11 @@ export const CreateWorkspaceModal = () => {
 
     const handleSubmit = () => {
         mutate({
-            name: "Workspace 1"
+            name: "Workspace 1",
         }, {
-            onSuccess() {
-                // Redirect to that workspace id
+            onSuccess(data) {
+                router.push("/workspaces/${data")
             },
-            onError: () => {
-                // Show toast error
-            },
-            onSettled: () => {
-                // Reset form
-            }
         })
     };
 
