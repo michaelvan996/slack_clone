@@ -23,14 +23,21 @@ export const CreateWorkspaceModal = () => {
         // TODO: Clear form
     };
 
-    const handleSubmit = () => {
-        mutate({
+    const handleSubmit = async () => {
+        try{
+        const data = await mutate({
             name: "Workspace 1",
         }, {
             onSuccess(data) {
-                router.push("/workspaces/${data")
+                
+            },
+            onError(error) {
+                
             },
         })
+        } catch(error) {
+
+        }
     };
 
     return (
