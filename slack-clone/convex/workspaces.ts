@@ -1,7 +1,8 @@
 import { v } from "convex/values";
 
 import { auth } from "./auth";
-import { getAuthUserId } from "@convex-dev/auth/server";
+
+
 import { mutation, query } from "./_generated/server";
 
 export const create = mutation({
@@ -27,6 +28,7 @@ export const create = mutation({
         return workspaceId;
     },
 });
+
 
 
 export const get = query({
